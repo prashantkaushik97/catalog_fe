@@ -9,7 +9,7 @@ const ProductCatalog = () => {
   const [searchParams, setSearchParams] = useState({
     search: '',
     category: '',
-    tags: [],  // Ensure tags is always an array
+    tags: [],  
   });
   const [products, setProducts] = useState([]);
   
@@ -18,7 +18,6 @@ const ProductCatalog = () => {
 
   const handleSearchChange = (field, value) => {
     if (field === 'tags') {
-      // Ensure tags are always an array
       value = Array.isArray(value) ? value : [value];
     }
     setSearchParams(prev => ({ ...prev, [field]: value }));
@@ -36,7 +35,7 @@ const ProductCatalog = () => {
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
-      setProducts(data); // Assuming the API returns a JSON array of products
+      setProducts(data); 
     } catch (error) {
       console.error('Error fetching products:', error);
     }
