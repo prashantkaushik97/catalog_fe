@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Typography, Container, Grid, Box } from '@mui/material';
-import { getApiUrl } from '../config'; // Import the getApiUrl function
+import { getApiUrl } from '../config'; 
 
 import SearchBar from '../components/SearchBar';
 import ProductCard from '../components/ProductCard';
