@@ -24,7 +24,7 @@ const ProductCatalog = () => {
   };
 
   const handleSearchSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
     const queryParams = new URLSearchParams();
     if (searchParams.search) queryParams.append('name', searchParams.search);
     if (searchParams.category) queryParams.append('category', searchParams.category);
